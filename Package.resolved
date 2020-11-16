@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ECNetworking",
+        "repositoryURL": "https://github.com/EvanCooper9/ECNetworking",
+        "state": {
+          "branch": null,
+          "revision": "7029b7b033e42a56f433a9a9a5fe212e572b81c3",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "a82518285848456f404abba1919120161465ea9f",
+          "version": "6.0.0-rc.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
