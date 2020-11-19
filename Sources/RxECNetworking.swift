@@ -40,7 +40,7 @@ extension Network: RxECNetworking {
     private func completion<T>(for single: Single<T>.SingleObserver, with result: Result<T, Error>) {
         switch result {
         case .failure(let error):
-            single(.failure(error))
+            single(.error(error))
         case .success(let response):
             single(.success(response))
         }
