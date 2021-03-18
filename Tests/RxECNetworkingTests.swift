@@ -10,7 +10,7 @@ final class RxECNetworkingTests: XCTestCase {
     }
     
     private var session: MockURLSession!
-    private var network: RxECNetworking!
+    private var network: RxNetworking!
     private var url: URL!
     private var disposeBag: DisposeBag!
     
