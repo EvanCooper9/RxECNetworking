@@ -31,7 +31,7 @@ public protocol RxResponseCompletedAction: RxAction, ResponseCompletedAction {
 }
 
 extension RxResponseCompletedAction {
-    public func responseReceived(request: NetworkRequest, response: NetworkResponse, completion: @escaping (Result<NetworkResponse, Error>) -> Void) {
+    func responseCompleted(request: NetworkRequest, response: NetworkResponse, completion: @escaping (Result<NetworkResponse, Error>) -> Void) {
         responseReceived(request: request, response: response)
             .subscribe { response in
                 completion(.success(response))
@@ -53,18 +53,18 @@ extension TestRxAction: RxRequestWillBeginAction {
 }
 
 extension TestRxAction: RxRequestBeganAction {
-    func requestBegan(_ request: URLRequest) {
+    func requestBegan(_ request: NetworkRequest) {
         print(#function)
     }
 }
 
 extension TestRxAction: RxResponseBeganAction {
-    func responseBegan(request: NetworkRequest, response: HTTPURLResponse) {
+    func responseBegan(request: NetworkRequest, response: NetworkResponse) {
         print(#function)
     }
 }
 
-extension TestRxAction: RxResponseCompletedAction {
+extension TestRxAction: RxResponseCompletedAction {    
     func responseReceived(request: NetworkRequest, response: NetworkResponse) -> Single<NetworkResponse> {
         .just(response)
     }
