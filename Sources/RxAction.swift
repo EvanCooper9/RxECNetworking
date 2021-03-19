@@ -27,7 +27,6 @@ public protocol RxResponseBeganAction: RxAction, ResponseBeganAction {}
 
 public protocol RxResponseCompletedAction: RxAction, ResponseCompletedAction {
     var disposeBag: DisposeBag { get }
-    
     func responseCompleted(request: NetworkRequest, response: NetworkResponse) -> Single<NetworkResponse>
 }
 
