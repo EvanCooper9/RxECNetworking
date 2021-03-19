@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/EvanCooper9/ECNetworking",
         "state": {
           "branch": null,
-          "revision": "7029b7b033e42a56f433a9a9a5fe212e572b81c3",
-          "version": "1.1.0"
+          "revision": "51eaef4707b5bd8b4c7894ac58b90b9d729bc1f7",
+          "version": "1.2.3"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
           "branch": null,
-          "revision": "a82518285848456f404abba1919120161465ea9f",
-          "version": "6.0.0-rc.1"
+          "revision": "7e01c05f25c025143073eaa3be3532f9375c614b",
+          "version": "6.1.0"
         }
       }
     ]
