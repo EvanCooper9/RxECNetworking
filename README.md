@@ -1,21 +1,19 @@
-# RxECNetworking
+# RxNetworking
 
 An extension of [ECNetworking](https://github.com/EvanCooper9/ECNetworking).
 
 ## Installation
+
 ### SPM
 ```swift
-.package(url: "https://github.com/EvanCooper9/RxECNetworking", from: "1.0.0")
-```
-
-### Cocoapods
-```ruby
-pod 'RxECNetworking'
+.package(url: "https://github.com/EvanCooper9/RxECNetworking", from: "2.0.0")
 ```
 
 ## Usage
 
-The only difference is how requests are sent and responses are handled.
+### Sending Requests
+
+Sending requests is reactive. Only the syntax is changed.
 
 ```swift
 let request = ListUsersRequest(online: true)
@@ -25,4 +23,21 @@ network.send(request)
         showUsers(users)
     })
     .disposed(by: disposeBag)
+```
+
+### Actions
+
+Actions are also reactive, all action protocols gain an `Rx` prefix, and require a  `DisposeBag`.
+
+```swift
+struct AuthenticationAction: RxRequestWillBeginAction {
+    
+    let disposeBag = DisposeBag()
+
+    func requestWillBegin(_ request: NetworkRequest) -> Single<NetworkRequest>
+        guard request.requiresAuthentication else { .just(request) }
+        // add authentication headers
+        return .just(request)
+    }
+}
 ```
