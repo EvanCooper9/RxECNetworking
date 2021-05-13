@@ -1,4 +1,4 @@
-# RxNetworking
+# RxECNetworking
 
 An extension of [ECNetworking](https://github.com/EvanCooper9/ECNetworking).
 
