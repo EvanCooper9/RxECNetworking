@@ -11,7 +11,7 @@ let package = Package(
             targets: ["RxECNetworking"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/EvanCooper9/ECNetworking", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/EvanCooper9/ECNetworking", .upToNextMajor(from: "3.0.0")),
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0"))
     ],
     targets: [
